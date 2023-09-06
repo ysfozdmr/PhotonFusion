@@ -337,11 +337,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _interpolationDataSource: 0
+  Anim: {fileID: 5290220796601200075}
   JumpForce: 5
   PlayerSpeed: 2
   velocity: {x: 0, y: 0, z: 0}
   Camera: {fileID: 0}
   GravityValue: -9.81
+  _Movement: 0
 --- !u!114 &2569758870171380805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +522,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 33e7a2ddade3ab34ca84c868d3287d49, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 33e7a2ddade3ab34ca84c868d3287d49, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b8b9ddee31461d4458ee5f03b7c016b9, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 33e7a2ddade3ab34ca84c868d3287d49, type: 3}
+      propertyPath: m_ApplyRootMotion
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -527,5 +537,10 @@ PrefabInstance:
 --- !u!4 &2272786319391438769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33e7a2ddade3ab34ca84c868d3287d49, type: 3}
+  m_PrefabInstance: {fileID: 1729442046597189722}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5290220796601200075 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 33e7a2ddade3ab34ca84c868d3287d49, type: 3}
   m_PrefabInstance: {fileID: 1729442046597189722}
   m_PrefabAsset: {fileID: 0}

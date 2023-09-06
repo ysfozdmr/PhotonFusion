@@ -1,6 +1,7 @@
 using Fusion;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerInput : NetworkBehaviour
@@ -20,7 +21,6 @@ public class PlayerInput : NetworkBehaviour
 
     public static void Bubble2DisplayedChanged(Changed<PlayerInput> changed)
     {
-        //int a = 0;
         if (changed.Behaviour.Bubble2Displayed)
         {
             changed.Behaviour.interactions.SayWhatsUp();
@@ -46,28 +46,7 @@ public class PlayerInput : NetworkBehaviour
 
     public override void FixedUpdateNetwork()
     {
-        /*if (HasStateAuthority == false)
-        {
-            return;
-        }*/
-
-        if (interactions != null)
-        {
-            interactions.Quiet();
-        }
-
-        // Poll input
-        GetInput<PlayerInputs>(out var input);
-
-        if (input.buttons.IsSet(PlayerButtons.DisplayDialog1))
-        {
-            interactions.SayHi();
-        }
-
-        if (input.buttons.IsSet(PlayerButtons.DisplayDialog2))
-        {
-            interactions.SayWhatsUp();
-        }
+        
     }
 
     private void Update()
